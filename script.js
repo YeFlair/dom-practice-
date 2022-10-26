@@ -104,3 +104,45 @@ element.innerHTML = "Red Button"
 }
 element.onclick = turnButtonRed // .onclick is not CamelCase 
 
+console.log("________________________________\n")
+console.log("Event Listeners")
+
+let readMore = document.getElementById('read-more');
+let moreInfo = document.getElementById('more-info');
+
+/* 
+  .addEventListener() is a method that allows a DOM element to listen for a specific event and execute a block of code
+
+  DOM element that listens for an event is called the 'event target' - the block of code that runs is called the event handler
+
+let eventTarget = document.getElementById('targetElement')
+
+eventTarget.addEventListener('click', function() {
+  //tell this function to do something
+})
+ • addEventListener() takes two arguments - an event name(e.g: 'click') in string format and an event handler function
+ • 
+
+*/
+
+const showInfo = () =>{
+  moreInfo.style.display = "block"
+  /*
+    created a statement that changes the .display style property of the moreInfo element to block
+  */
+}
+
+readMore.addEventListener('click', showInfo)
+
+console.log("________________________________\n")
+console.log("Remove Event Handles")
+
+/*
+  when you want a button to stop working after its click - must us an removing 
+  even handler. 
+
+  .removeEventListner() method is used to reverse .addEvenetListener() method. 
+    • stops the event target from listening
+    • takes two arguments - event type name and event handler you want to remove
+
+*/
